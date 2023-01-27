@@ -1,9 +1,13 @@
-import { CarRepository } from "../../infrastructure/repositories/CarRepository.ts";
+import CarsService from "../services/CarsService.ts";
 
-export default class QueryCars {
+export default class QueryAllCars {
+  private service;
+
+  constructor(service: CarsService) {
+    this.service = service;
+  }
+
   async execute() {
-    const repository = new CarRepository();
-
-    return await repository.findAll();
+    return await this.service.findAll();
   }
 }
