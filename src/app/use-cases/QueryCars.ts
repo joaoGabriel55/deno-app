@@ -8,6 +8,10 @@ export default class QueryAllCars {
   }
 
   async execute() {
-    return await this.service.findAll();
+    try {
+      return await this.service.findAll();
+    } catch (error) {
+      throw error;
+    }
   }
 }

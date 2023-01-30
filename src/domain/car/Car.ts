@@ -1,7 +1,7 @@
 type HexadecimalColor = string;
 
 export interface Car {
-  id: number;
+  id: string;
   name: string;
   year: number;
   brand: string;
