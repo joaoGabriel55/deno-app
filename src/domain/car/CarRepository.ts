@@ -3,13 +3,15 @@ import { Car } from "./Car.ts";
 import db from "../../infrastructure/db.ts";
 import EntityRepository from "../shared/EntityRepository.ts";
 
-export class CarRepository implements EntityRepository<Car> {
+export default class CarsRepository implements EntityRepository<Car> {
   create(entity: Car): Promise<Car> {
     throw new Error("Not implement yet!");
   }
 
   async findAll(): Promise<Car[]> {
     const { data, error } = await db.from("cars").select();
+
+    if (error) throw Error('Error to find all cars')
 
     if (!data) return [];
 
