@@ -1,4 +1,4 @@
-import CarsService from "../services/CarsService.ts";
+import CarsService from "../../domain/car/CarsService.ts";
 
 export default class QueryAllCars {
   private service;

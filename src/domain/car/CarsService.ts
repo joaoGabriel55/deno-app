@@ -1,6 +1,6 @@
-import { Car } from "../../domain/Car.ts";
-import { CarRepository } from "../../infrastructure/repositories/CarRepository.ts";
-import EntityRepository from "../../infrastructure/repositories/EntityRepository.ts";
+import EntityRepository from "../shared/EntityRepository.ts";
+import { Car } from "./Car.ts";
+import { CarRepository } from "./CarRepository.ts";
 
 export default class CarsService {
   private repository;

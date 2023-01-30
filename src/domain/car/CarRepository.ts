@@ -1,7 +1,7 @@
 // deno-lint-ignore-file no-explicit-any
-import { Car } from "../../domain/Car.ts";
-import db from "../db/instance.ts";
-import EntityRepository from "./EntityRepository.ts";
+import { Car } from "./Car.ts";
+import db from "../../infrastructure/db.ts";
+import EntityRepository from "../shared/EntityRepository.ts";
 
 export class CarRepository implements EntityRepository<Car> {
   create(entity: Car): Promise<Car> {
